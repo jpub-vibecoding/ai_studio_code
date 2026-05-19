@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달콤공방 (Dalkom Gongbang) | 수제 쿠키 전문점</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS 4.0 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style type="text/css">
+        :root {
+            --bakery-bg: #FDFBF7;
+            --bakery-ink: #433422;
+            --bakery-accent: #8C7355;
+            --bakery-hero: #AD9466;
+            --bakery-soft: #E5DED4;
+            --bakery-footer: #F3EFE9;
+        }
+
+        body {
+            background-color: var(--bakery-bg);
+            color: var(--bakery-ink);
+            font-family: 'Noto Sans KR', 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Scroll Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover Effects */
+        .cookie-card {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .cookie-card:hover {
+            transform: translateY(-12px);
+        }
+
+        .btn-order {
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-order:hover {
+            box-shadow: 0 20px 40px -10px rgba(140, 115, 85, 0.3);
+        }
+    </style>
+</head>
+<body class="selection:bg-[#8C7355]/10">
+
+    <!-- Navigation Header -->
+    <nav class="h-20 flex items-center justify-between px-6 md:px-12 border-b border-[#E5DED4] sticky top-0 bg-[#FDFBF7]/80 backdrop-blur-md z-50">
+        <div class="text-2xl font-bold tracking-tight text-[#433422] font-serif italic">달콤공방</div>
+        <div class="hidden md:flex gap-8 text-[10px] uppercase tracking-[0.2em] opacity-60 font-sans font-semibold">
+            <span class="cursor-pointer hover:opacity-100 transition-opacity">About</span>
+            <span class="cursor-pointer hover:opacity-100 transition-opacity">Cookies</span>
+            <span class="cursor-pointer hover:opacity-100 transition-opacity">Reviews</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="w-full bg-[#AD9466] py-24 md:py-40 px-6 text-center text-white overflow-hidden relative">
+        <div class="max-w-5xl mx-auto relative z-10 transition-all duration-1000 transform opacity-0 scale-95" id="hero-content">
+            <h1 class="text-5xl md:text-8xl font-bold tracking-tight mb-6 leading-[1.1]">
+                매일 아침 구워 <br /> 당일 배송합니다.
+            </h1>
+            <p class="text-lg md:text-2xl font-light opacity-90 font-serif">
+                따뜻한 온기와 달콤한 행복을 문 앞까지 전해드려요.
+            </p>
+        </div>
+        <!-- Decorative circle -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl -z-0"></div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="py-20 md:py-32 px-6 text-center reveal">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-3xl md:text-5xl mb-6 tracking-tight text-[#433422] font-medium">
+                정성을 담은 프리미엄 수제 쿠키
+            </h2>
+            <p class="text-base md:text-xl text-[#8C7355] italic font-serif leading-relaxed opacity-80">
+                매일 아침 달콤한 향기로 문을 여는 작은 공방, 달콤공방입니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <main class="max-w-7xl mx-auto px-6 pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            
+            <!-- Product 1: 초코칩 쿠키 -->
+            <div class="bg-white rounded-[2.5rem] p-8 border border-[#E5DED4] flex flex-col shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] cookie-card reveal">
+                <div class="relative aspect-square overflow-hidden rounded-3xl mb-8 bg-[#FDFBF7]">
+                    <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&q=80&w=800" alt="초코칩 쿠키" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110">
+                    <div class="absolute inset-0 ring-1 ring-inset ring-[#433422]/5 rounded-3xl"></div>
+                </div>
+                <div class="flex flex-col flex-1">
+                    <h3 class="font-serif text-2xl mb-2 text-[#433422] font-semibold">초코칩 쿠키</h3>
+                    <p class="text-sm text-[#8C7355]/70 leading-relaxed mb-10 flex-grow">
+                        진한 벨기에산 초코칩이 듬뿍 들어간 클래식한 수제 쿠키입니다. 겉바속촉의 정석을 느껴보세요.
+                    </p>
+                    <div class="flex flex-col gap-6 pt-6 border-t border-[#E5DED4]/50">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs uppercase tracking-widest text-[#433422]/40 font-bold">Price</span>
+                            <span class="font-bold text-2xl text-[#433422]">3,500원</span>
+                        </div>
+                        <a href="https://pf.kakao.com" target="_blank" class="w-full bg-black text-white py-4 rounded-xl text-sm font-bold tracking-wider hover:bg-[#8C7355] transition-all duration-300 text-center btn-order">
+                            주문하기
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2: 말차 쿠키 -->
+            <div class="bg-white rounded-[2.5rem] p-8 border border-[#E5DED4] flex flex-col shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] cookie-card reveal">
+                <div class="relative aspect-square overflow-hidden rounded-3xl mb-8 bg-[#FDFBF7]">
+                    <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553ad?auto=format&fit=crop&q=80&w=800" alt="말차 쿠키" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110">
+                    <div class="absolute inset-0 ring-1 ring-inset ring-[#433422]/5 rounded-3xl"></div>
+                </div>
+                <div class="flex flex-col flex-1">
+                    <h3 class="font-serif text-2xl mb-2 text-[#433422] font-semibold">말차 쿠키</h3>
+                    <p class="text-sm text-[#8C7355]/70 leading-relaxed mb-10 flex-grow">
+                        제주산 말차의 진한 향과 화이트 초코칩, 마카다미아가 어우러진 고급스러운 맛입니다.
+                    </p>
+                    <div class="flex flex-col gap-6 pt-6 border-t border-[#E5DED4]/50">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs uppercase tracking-widest text-[#433422]/40 font-bold">Price</span>
+                            <span class="font-bold text-2xl text-[#433422]">3,800원</span>
+                        </div>
+                        <a href="https://pf.kakao.com" target="_blank" class="w-full bg-black text-white py-4 rounded-xl text-sm font-bold tracking-wider hover:bg-[#8C7355] transition-all duration-300 text-center btn-order">
+                            주문하기
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3: 솔티드 캬라멜 쿠키 -->
+            <div class="bg-white rounded-[2.5rem] p-8 border border-[#E5DED4] flex flex-col shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] cookie-card reveal">
+                <div class="relative aspect-square overflow-hidden rounded-3xl mb-8 bg-[#FDFBF7]">
+                    <img src="https://images.unsplash.com/photo-1558961309-62246766568a?auto=format&fit=crop&q=80&w=800" alt="솔티드 캬라멜 쿠키" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110">
+                    <div class="absolute inset-0 ring-1 ring-inset ring-[#433422]/5 rounded-3xl"></div>
+                </div>
+                <div class="flex flex-col flex-1">
+                    <h3 class="font-serif text-2xl mb-2 text-[#433422] font-semibold">솔티드 캬라멜 쿠키</h3>
+                    <p class="text-sm text-[#8C7355]/70 leading-relaxed mb-10 flex-grow">
+                        매장에서 직접 끓인 수제 캬라멜과 말돈 소금의 완벽한 단짠 조화를 자랑합니다.
+                    </p>
+                    <div class="flex flex-col gap-6 pt-6 border-t border-[#E5DED4]/50">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs uppercase tracking-widest text-[#433422]/40 font-bold">Price</span>
+                            <span class="font-bold text-2xl text-[#433422]">4,000원</span>
+                        </div>
+                        <a href="https://pf.kakao.com" target="_blank" class="w-full bg-black text-white py-4 rounded-xl text-sm font-bold tracking-wider hover:bg-[#8C7355] transition-all duration-300 text-center btn-order">
+                            주문하기
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#F3EFE9] pt-20 pb-16 px-6 border-t border-[#E5DED4]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+            <div class="flex flex-col gap-2">
+                <p class="text-sm font-bold text-[#433422]">운영 시간</p>
+                <p class="text-xs text-[#8C7355] font-medium">화 - 토 11:00 - 20:00 <span class="opacity-50 ml-1">(일, 월 휴무)</span></p>
+            </div>
+
+            <div class="flex flex-col gap-2 text-center">
+                <p class="text-sm font-bold text-[#433422]">연락처</p>
+                <p class="text-xs text-[#8C7355] font-medium">010-1234-5678</p>
+            </div>
+
+            <div class="flex flex-col gap-2 md:text-right">
+                <p class="text-sm font-bold text-[#8C7355]">Instagram</p>
+                <p class="text-xs tracking-tight text-[#433422] font-semibold">@sweet_atelier_cookies</p>
+            </div>
+        </div>
+        
+        <div class="mt-16 text-center">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-[#433422]/20 font-bold">
+                &copy; 2026 달콤공방
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Hero content initial animation
+        setTimeout(() => {
+            const heroContent = document.getElementById('hero-content');
+            heroContent.classList.remove('opacity-0', 'scale-95');
+            heroContent.classList.add('opacity-100', 'scale-100');
+        }, 100);
+
+        // Scroll Reveal Animation Logic
+        const reveals = document.querySelectorAll('.reveal');
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        reveals.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
