@@ -1,6 +1,0 @@
-{
-  "name": "달콤공방 (Dalkom Gongbang)",
-  "description": "수제 쿠키 전문점 달콤공방의 따뜻한 감성 랜딩 페이지입니다.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
